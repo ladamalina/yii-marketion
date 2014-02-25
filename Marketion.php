@@ -121,14 +121,15 @@ class Marketion extends CApplicationComponent
      */
     public function subscribersImport($listId, $emailList)
     {
-        $response = $this->query('Subscribers.Import', array(
+        $command = 'Subscribers.Import';
+        $response = $this->query($command, array(
             'ListID' => $listId,
             'ImportStep' => 1,
             'ImportType' => 'Copy',
             'ImportData' => $emailList,
         ));
         if (!$response || $response->Success != 1) {
-            throw new CException ('Error while processing: ' . 'Subscribers.Import');
+            throw new CException ('Error while processing: ' . $command);
         }
         $params = [
             'ListID' => $listId,
