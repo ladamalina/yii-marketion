@@ -2,7 +2,7 @@ Yii компонент для работы с api сервиса e-mail расс
 
 ## Установка
 
-Загрузите yii-smsc из этого репозитория github:
+Загрузите yii-marketion из этого репозитория github:
 
     cd protected/components
     git clone https://github.com/ladamalina/yii-marketion.git
